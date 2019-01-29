@@ -1,0 +1,39 @@
+@charset "utf-8";
+
+/*
+   New Perspectives on HTML and CSS, 7th Edition
+   Tutorial 8
+   Case Problem 1
+
+   Rhetoric in the United States Styles for Media
+     Author: Trent Peterson
+      Date:  1.29.19   
+
+   Filename: ws_media.css
+
+*/
+
+/* VideoPlayer Styles */
+/* I added in the styles for the video here. Set the margin width adn changed its display */
+video {
+    display: block;
+    width: 90%;
+    margin: 5px auto;
+}
+
+/* This makes it so these styles only effect when the screen is 521px or bigger */
+@media only screen and (min-width: 521px) {
+    video {
+        width: 360px;
+        float: right;
+        margin: 10px;
+    }
+}
+
+/* Track Styles */
+/* This should change the color and the font size of the captions as well as the background color it doesn't work on safari but it does work on firefox */
+::cue {
+    font: 1.3em sans-serif;
+    color: rgb(221, 128, 160);
+    background: rgba(255, 255, 255, .8);
+}
